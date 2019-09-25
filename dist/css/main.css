@@ -60,6 +60,7 @@
       background-size: cover; }
   .menu .nav-item {
     transform: translate3d(600px, 0, 0);
+    text-align: center;
     transition: all 0.5s ease-out; }
     .menu .nav-item.show {
       transform: translate3d(0, 0, 0); }
@@ -206,28 +207,24 @@ main {
     margin-bottom: 3rem;
     transition: all 0.5s ease-out; }
     .boxes div:hover {
-      padding: 0.5rem 1.5rem;
+      padding: 2rem 2rem;
       background: #eece1a;
       color: #000; }
       .boxes div:hover span {
         color: #000; }
 
-.btn, .btn-dark, .btn-light {
+.btn, .btn-dark {
   display: block;
   padding: 0.5rem 1rem;
   border: 0;
   margin-bottom: 0.3rem; }
-  .btn:hover, .btn-dark:hover, .btn-light:hover {
+  .btn:hover, .btn-dark:hover {
     background: #eece1a;
     color: #000;
     transition: all 0.5s ease-out; }
 
 .btn-dark {
   background: black;
-  color: #fff; }
-
-.btn-light {
-  background: #c4c4c4;
   color: #fff; }
 
 #main-footer {
@@ -239,7 +236,9 @@ main {
 
 @media screen and (min-width: 1171px) {
   .projects {
-    grid-template-columns: repeat(4, 1fr); } }
+    grid-template-columns: repeat(4, 1fr); }
+  .portrait {
+    transform: scale(1.25); } }
 
 @media screen and (min-width: 769px) and (max-width: 1170px) {
   .projects {
@@ -268,7 +267,8 @@ main {
     height: 25vh;
     transform: translate3d(100%, 0, 0); }
   .portrait {
-    transform: scale(0.625); }
+    background: url("../img/profile_small.jpg");
+    transform: scale(0.65); }
   .about-info {
     grid-template-areas: "bioimage" "bio" "job1" "job2" "job3";
     grid-template-columns: 1fr; }
@@ -276,7 +276,16 @@ main {
     grid-template-columns: repeat(2, 1fr); } }
 
 @media screen and (max-width: 500px) {
-  main#home h1 {
-    margin-top: 10vh; }
+  main {
+    padding: 2rem; }
+    main #home h1 {
+      margin-top: 10vh; }
+    main .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem; }
+  .portrait {
+    transform: scale(0.55, 0.75); }
   .projects {
-    grid-template-columns: 1fr; } }
+    grid-template-columns: 1fr; }
+  .boxes div {
+    font-size: 1.25rem; } }

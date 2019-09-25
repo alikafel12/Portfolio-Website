@@ -3,6 +3,10 @@
   .projects {
     grid-template-columns: repeat(4, 1fr);
   }
+
+  .portrait {
+    transform: scale(1.25);
+  }
 }
 
 // Desktops & Laptops
@@ -47,7 +51,8 @@
   }
 
   .portrait {
-    transform: scale(0.625);
+    background: url("../img/profile_small.jpg");
+    transform: scale(0.65);
   }
 
   .about-info {
@@ -68,11 +73,29 @@
 
 // Smartphones
 @include mediaSm {
-  main#home h1 {
-    margin-top: 10vh;
+  main {
+    padding: 2rem;
+    #home h1 {
+      margin-top: 10vh;
+    }
+
+    .lg-heading {
+      margin-top: 1rem;
+      font-size: 5rem;
+    }
+  }
+
+  .portrait {
+    transform: scale(0.55, 0.75);
   }
 
   .projects {
     grid-template-columns: 1fr;
+  }
+
+  .boxes {
+    div {
+      font-size: 1.25rem;
+    }
   }
 }
